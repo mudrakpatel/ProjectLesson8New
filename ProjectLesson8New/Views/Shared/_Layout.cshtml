@@ -17,15 +17,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MVC demo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("MVC Demo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="fa fa-home fa-lg"> Home</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("About", "Home")">
+                            <i class="fa fa-home fa-lg"> About</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact", "Home")">
+                            <i class="fa fa-home fa-lg"> Contact</i>
+                        </a>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="@Url.Action("Index", "Genres")">
+                            <i class="fa fa-music fa-lg"> Genres</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Albums")">
+                            <i class="fa fa-circle fa-lg"> Albums</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "Artists")">
+                            <i class="fa fa-users fa-lg"> Artists</i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
